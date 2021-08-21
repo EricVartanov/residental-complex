@@ -31,6 +31,7 @@ $(document).ready(function () {
   floorPath.on("mouseover", function () {
     floorPath.removeClass("current-floor");
     currentFloor = $(this).attr("data-floor");
+    $(`[data-floor=${currentFloor}]`).toggleClass("current-floor")
     $(".counter").text(currentFloor);
   });
 
